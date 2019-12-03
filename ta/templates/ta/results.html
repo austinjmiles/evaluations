@@ -1,0 +1,54 @@
+<!doctype html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" >TA Evaluations</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}" tabindex="-1" >Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<title>TA Evaluations </title>
+{% load static %}
+<title>TA Evaluations </title>
+
+{% for i in answers %}
+	<h3> {{i.lab}} Survey </h3>
+	<p> Question 1: {{i.q0}} </p>
+	<p> Question 2: {{i.q1}} </p>
+	<p> Question 3: {{i.q2}} </p>
+	<p> Question 4: {{i.q3}} </p>
+	<p> Question 5: {{i.q4}} </p>
+	<p> Question 6: {{i.q5}} </p>
+	<p> Question 7: {{i.q6}} </p>
+	<p> Question 8: {{i.q7}} </p>
+	<p> Question 9: {{i.q8}} </p>
+	<p> Question 10: {{i.q9}} </p>
+	<p> Question 11: {{i.q10}} </p>
+	<p> Question 12: {{i.q11}} </p>
+	<p> Question 13: {{i.q12}} </p>
+	<p> Question 14: {{i.q13}} </p>
+	<p> Question 15: {{i.q14}} </p>
+	<p> Free response 1: {{i.f1}} </p>
+	<p> Free response 2: {{i.f2}} </p>
+	<p> Free response 3: {{i.f3}} </p>
+	<p> Free response 4: {{i.f4}} </p>
+	<p> Free response 5: {{i.f5}} </p>
+{% endfor %}
